@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="boxCronometro">
+        <p id="boxData"></p>
+        <div id="boxDisplay">--:--:--</div>
+        <div id="boxAlarme">Hora do alarme: 
+            <p id="alarme"> --:--:--</p>
+        </div>
+        <div id="boxEntrada">
+            <label for="input">Tempo do alarme(Segundos)</label>
+            <input type="number" id="input">
+        </div>
+        <div id="boxBotoes">
+            <input type="button" value="Ativar" id="ativar">
+            <input type="button" value="Parar" id="parar">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
