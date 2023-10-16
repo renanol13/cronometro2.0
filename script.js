@@ -46,13 +46,15 @@ ativar.addEventListener('click', () => {
     const s = horario.getSeconds() < 10 ? `0${horario.getSeconds()}` : horario.getSeconds()
     alarme.innerHTML = `${h}:${m}:${s}`
     alarme_OnOff = true
+    input.value = 0
 })
 
 
 parar.addEventListener('click', () => {
     boxCronometro.classList.remove('estilo_alarme')
     alarme_OnOff = false
-    input.value = ''
+    input.value = 0
+    input.focus()
     alarme.innerHTML = '--:--:--'
     som.pause()
     som.currentTime = 0 
