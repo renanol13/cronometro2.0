@@ -22,6 +22,7 @@ const verifica = () => {
     const tempo = new Date()
     if (tempo.getTime() >= timeStamp_alarme && alarme_OnOff) {
         boxCronometro.classList.add('estilo_alarme')
+        alarme.classList.add('animaçao')
         som.play()
         som.loop = -1
     }
@@ -46,18 +47,19 @@ ativar.addEventListener('click', () => {
     const s = horario.getSeconds() < 10 ? `0${horario.getSeconds()}` : horario.getSeconds()
     alarme.innerHTML = `${h}:${m}:${s}`
     alarme_OnOff = true
-    input.value = 0
+    input.value = ''
 })
 
 
 parar.addEventListener('click', () => {
     boxCronometro.classList.remove('estilo_alarme')
+    alarme.classList.remove('animaçao')
     alarme_OnOff = false
-    input.value = 0
     input.focus()
     alarme.innerHTML = '--:--:--'
     som.pause()
     som.currentTime = 0 
+    input.value = ''
 })
 
 

@@ -1,8 +1,16 @@
+@font-face {
+    font-family: 'digital';
+    src: url(./fontes/DS-DIGIB.TTF) format(TrueType);
+    
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 20px;
+    font-family: arial;
 }
 
 html{
@@ -14,6 +22,7 @@ body{
     width: 100%;
     justify-content: center;
     margin-top: 100px;
+    background-color: cadetblue;
 }
 
 #boxCronometro{
@@ -21,10 +30,11 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: #eee;
-    border: 3px solid #888;
+    border: 4px solid #928f8f;
     width: 80%;
     border-radius: 20px;
     padding: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.475);
 }
 
 #boxData{
@@ -33,9 +43,9 @@ body{
 }
 
 #boxDisplay{
+    font-family: digital;
     text-align: center;
-    font-size: 1.2em;
-    font-family: arial;
+    font-size: 1.8em;
     color: rgb(10, 208, 10);
     padding: 15px;
     background-color: #333;
@@ -49,9 +59,7 @@ body{
     font-weight: 600;
 }
 
-#alarme{
-    color: rgb(49, 156, 76);
-}
+
 
 #boxEntrada{
     display: flex;
@@ -65,8 +73,10 @@ body{
 #boxEntrada > #input{
     padding: 10px;
     width: 250px;
-    /* font-size: 1.2em; */
     border-radius: 5px;
+}
+
+#alarme{
 }
 
 #ativar,#parar{
@@ -78,6 +88,29 @@ body{
     border: 3px solid;
 }
 
+#ativar:active,#parar:active{
+    background-color: lightgrey;
+    transform: translate(-1px,-2px);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.459);
+}
+
 .estilo_alarme{
     background-color: red !important;
+}
+
+.animaçao{
+    animation-name: transformaçao;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes transformaçao {
+    to{
+        opacity: 100%;
+        color: white;
+    }from{
+        opacity: 80%;
+        color: #aaa;
+    }
 }
