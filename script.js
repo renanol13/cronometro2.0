@@ -15,7 +15,7 @@ const tempo = new Date()
 const d = tempo.getDate() < 10? `0${tempo.getDate()}`:tempo.getDate()
 const m = tempo.getMonth() < 10? `0${tempo.getMonth()}`:tempo.getMonth()
 const a =tempo.getFullYear()
-boxData.innerHTML = `${d}/${m}/${a}`
+boxData.innerHTML = `${d}/${m+1}/${a}`
 
 
 const verifica = () => {
