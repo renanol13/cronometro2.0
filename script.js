@@ -13,7 +13,7 @@ let som = new Audio('som-Alarme.mp3')
 
 const tempo = new Date()
 const d = tempo.getDate() < 10? `0${tempo.getDate()}`:tempo.getDate()
-const m = tempo.getMonth() < 10? `0${tempo.getMonth()}`:tempo.getMonth()
+const m = tempo.getMonth() < 10 ? `0${tempo.getMonth()+1}` : tempo.getMonth()+1
 const a =tempo.getFullYear()
 boxData.innerHTML = `${d}/${m+1}/${a}`
 
